@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pavan's Portfolio</title>
+        <link rel="stylesheet" href="portfolio_style.css">
+    </head>
+    <div class="sidenav" id="sideBar">
+        <a class="btn" id="closeBtn" onclick="closeBar()"><</a>
+        <a class="btn" onclick="open_page('index.html')">Home</a>
+        <a class="btn" id="selected_page">Portfolio</a>
+    </div>
+    <body class="mainBody">
+        <div class="video-container">
+            <video preload="auto" autoplay loop muted plays-inline src="videos/background.mp4"></video>
+        </div>
+        <div class="main-container">
+            <a class="btn" id="openBtn" onclick="openBar()">></a>
+            <label id="AboutMeLbl">My Portfolio.</label>
+            <svg width="100%" height="10">
+                <line id="divider1" x1="30%" y1="0" x2="70%" y2="0" style="stroke: rgb(35, 35, 35); stroke-width: 2.5;" />
+            </svg>
+            <div class="flex-container">
+                <a href="https://github.com/PcShadowwZ/gmod" target="_blank" class="flex-child"> 
+                    <img id="img" src="images/gmod.png" height="140" width="140"/>
+                    <label id="text">A collection of some garry's mod addons i worked on for servers or my own enjoyment, unfortunately many files have been lost to a hard drive getting bricked. Language used: LUA</label>
+                </a>
+                <a href="https://github.com/PcShadowwZ/portfolio_site" target="_blank" class="flex-child"> 
+                    <img id="img" src="images/profile.png" height="140" width="140"/>
+                    <label id="text">The github repository to this website, my first propper site with limited help from online searches. Languages used: HTML, Javascript</label>
+                </a>
+                <a href="https://gx.games/games/v16dqd/undertale-underfell-undyne-the-undying/" target="_blank" class="flex-child"> 
+                    <img id="img" src="images/undyne.png" height="140" width="140"/>
+                    <label id="text">An undertale fangame coded from scracth using gamemaker studio as the engine. 3000+ impressions over multiple sites. Language used: GML</label>
+                </a>
+                <a href="https://pcshadowwz.itch.io/atcs" target="_blank" class="flex-child"> 
+                    <img id="img" src="images/treesim.png" height="140" width="140"/>
+                    <label id="text">Game made in 3 days for the cozy autumn gamme jam. 200+ impressions over multiple sites. Language used: GML</label>
+                </a>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <p>Site Made by Pavan/PcShadowwZ<br>
+    </footer>
+    <script>
+        function open_page(url) {
+            window.open(url, "_self");
+        } 
+
+        function openBar() {
+            document.getElementById("sideBar").style.width = "150px";
+            document.getElementById("openBtn").style.left = "155px";
+            document.getElementById("openBtn").style.visibility = "hidden";
+        }
+          
+        function closeBar() {
+            document.getElementById("sideBar").style.width = "0px";
+            document.getElementById("openBtn").style.left = "5px";
+            document.getElementById("openBtn").style.visibility = "visible";
+        }
+
+        function rgb_dividers() {
+            var datee = new Date()
+            var time = datee.getTime();
+            var col = "hsl(" + Math.abs(Math.sin(time/10000) * 360) + ",80%,50%)"
+            document.getElementById("divider1").style.stroke = col;
+            console.log(col);
+        }
+        rgb_dividers();
+        setInterval(rgb_dividers, 1);
+    </script>
+</html>
