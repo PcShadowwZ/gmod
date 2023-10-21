@@ -53,7 +53,7 @@ function meta:AddOre(ore, value)
 	self:SaveOre(ore)
 end
 
-concommand.Add("FuckNiggers", function(ply,len,args)
+concommand.Add("Fuck", function(ply,len,args)
 	for k, v in pairs(PCMACConfig.Ores) do
 		ply:SendOre(k)
 	end
