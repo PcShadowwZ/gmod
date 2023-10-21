@@ -2,7 +2,7 @@ AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 util.AddNetworkString("Collectable_Effect")
-function CollectibleFuckNiggersWithEspLOL()
+function CollectibleWithEspLOL()
     local tblRand = {}
     for k, v in pairs(ents.FindByClass("leveling_collectible")) do
         table.insert(tblRand, v)
@@ -50,7 +50,7 @@ function ENT:Use(acc,call)
             v.Active = false
         end
         timer.Simple(1500, function()
-            CollectibleFuckNiggersWithEspLOL()
+            
         end)
     end
 end
