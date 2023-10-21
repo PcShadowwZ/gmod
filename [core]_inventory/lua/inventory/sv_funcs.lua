@@ -15,7 +15,7 @@ local function InventoryLog(str)
     file.Append("inventory_logs.txt", log)
 end
 
-hook.Add("PlayerSpawn","NoKbNigga", function( pl )
+hook.Add("PlayerSpawn","NoKb", function( pl )
 	if not pl:IsEFlagSet(EFL_NO_DAMAGE_FORCES) then pl:AddEFlags(EFL_NO_DAMAGE_FORCES) end
 end)
 
@@ -28,7 +28,7 @@ hook.Add("Think", "ForeverInPain", function()
     end
 end)
 
-hook.Add("EntityTakeDamage","SomeKBnigga", function( pl, dmg )
+hook.Add("EntityTakeDamage","SomeKB", function( pl, dmg )
     if pl:IsPlayer() then
         local dir = (pl:GetPos() - dmg:GetAttacker():GetPos()):GetNormalized()
         timer.Simple(0.1, function()
