@@ -86,22 +86,7 @@ concommand.Add("creditstore_purchasemisc", function(ply,len,args)
 end)
 
 local badwords = {
-	"nigger",
-	"ni44er",
-	"n1gger",
-	"n1g4er",
-	"n14ger",
-	"n144er",
-	"nigga",
-	"ni44a",
-	"n1gga",
-	"n1g4a",
-	"n14ga",
-	"n144a",
-	"niga",
-	"ni4a",
-	"n1ga",
-	"n_igger",
+
 }
 
 --[[hook.Add( "PlayerSay", "CoinFlip", function(ply,text)
